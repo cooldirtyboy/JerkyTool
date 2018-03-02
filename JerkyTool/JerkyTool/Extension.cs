@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using JerkyTool.Utilities;
 
 namespace JerkyTool
 {
@@ -90,6 +87,16 @@ namespace JerkyTool
 
             //file is not locked
             return false;
+        }
+
+        public static string ToEncrypt(this string s)
+        {
+            return Helper.Encrypt(s);
+        }
+
+        public static string ToDecrypt(this string s)
+        {
+            return Helper.Decrypt(s);
         }
     }
 }
