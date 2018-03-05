@@ -2,11 +2,6 @@
 
   <PropertyGroup>
      <TargetFramework>net461</TargetFramework>
-     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
 
 </Project>
