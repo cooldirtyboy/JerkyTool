@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Data;
 using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
 using JerkyTool.Utilities;
 
 namespace JerkyTool
@@ -202,6 +205,114 @@ namespace JerkyTool
                 }
             }
             return (valid && isnotblank);
+        }
+
+
+
+        public static bool IsNullOrEmpty(this Guid guid)
+        {
+            return (guid == Guid.Empty);
+        }
+
+        public static string Left(this string str, int length)
+        {
+            str = (str ?? string.Empty);
+            return str.Substring(0, Math.Min(length, str.Length));
+        }
+
+        public static string Right(this string str, int length)
+        {
+            str = (str ?? string.Empty);
+            return (str.Length >= length)
+                ? str.Substring(str.Length - length, length)
+                : str;
+        }
+
+        public static string Mid(this string param, int startIndex, int length)
+        {
+            string result = param.Substring(startIndex, length);
+            return result;
+        }
+
+        public static string ToXml(this object obj)
+        {
+            XmlSerializer s = new XmlSerializer(obj.GetType());
+            using (StringWriter writer = new StringWriter())
+            {
+                s.Serialize(writer, obj);
+                return writer.ToString();
+            }
+        }
+
+        public static T FromXml<T>(this string data)
+        {
+            XmlSerializer s = new XmlSerializer(typeof(T));
+            using (StringReader reader = new StringReader(data))
+            {
+                object obj = s.Deserialize(reader);
+                return (T)obj;
+            }
+        }
+
+        public static string ReadToEnd(this MemoryStream BASE)
+        {
+            BASE.Position = 0;
+            StreamReader R = new StreamReader(BASE);
+            return R.ReadToEnd();
+        }
+
+        public static string ReadAsString(this Stream stream)
+        {
+            var startPosition = stream.Position;
+            try
+            {
+                // 1. Check for a BOM
+                // 2. or try with UTF-8. The most (86.3%) used encoding. Visit: http://w3techs.com/technologies/overview/character_encoding/all/
+                var streamReader = new StreamReader(stream, new UTF8Encoding(encoderShouldEmitUTF8Identifier: false, throwOnInvalidBytes: true), detectEncodingFromByteOrderMarks: true);
+                return streamReader.ReadToEnd();
+            }
+            catch (DecoderFallbackException ex)
+            {
+                stream.Position = startPosition;
+
+                // 3. The second most (6.7%) used encoding is ISO-8859-1. So use Windows-1252 (0.9%, also know as ANSI), which is a superset of ISO-8859-1.
+                var streamReader = new StreamReader(stream, Encoding.GetEncoding(1252));
+                return streamReader.ReadToEnd();
+            }
+        }
+
+
+        public static string ToCsv(this DataTable dataTable)
+        {
+            StringBuilder sbData = new StringBuilder();
+
+            // Only return Null if there is no structure.
+            if (dataTable.Columns.Count == 0)
+                return null;
+
+            foreach (var col in dataTable.Columns)
+            {
+                if (col == null)
+                    sbData.Append(",");
+                else
+                    sbData.Append("\"" + col.ToString().Replace("\"", "\"\"") + "\",");
+            }
+
+            sbData.Replace(",", System.Environment.NewLine, sbData.Length - 1, 1);
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                foreach (var column in dr.ItemArray)
+                {
+                    if (column == null)
+                        sbData.Append(",");
+                    else
+                        sbData.Append("\"" + column.ToString().Replace("\"", "\"\"") + "\",");
+                }
+                sbData.Replace(",", System.Environment.NewLine, sbData.Length - 1, 1);
+            }
+
+            return sbData.ToString();
         }
     }
 
