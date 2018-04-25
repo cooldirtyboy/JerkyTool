@@ -2,6 +2,10 @@
 
   <PropertyGroup>
      <TargetFramework>net461</TargetFramework>
+     <Version>1.0.0.2</Version>
+     <Description>Simple tool that consist many different function.</Description>
+     <PackageProjectUrl>https://github.com/cooldirtyboy/JerkyTool</PackageProjectUrl>
+     <RepositoryUrl>https://github.com/cooldirtyboy/JerkyTool</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

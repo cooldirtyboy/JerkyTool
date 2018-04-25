@@ -8,6 +8,17 @@ using JerkyTool.Utilities;
 
 namespace JerkyTool
 {
+    public enum DateInterval
+    {
+        Year,
+        Month,
+        Day,
+        Hour,
+        Minute,
+        Weekday,
+        Second
+    }
+
     public static class Extension
     {
         public static DateTime ToDateTime(this string s)
@@ -15,6 +26,30 @@ namespace JerkyTool
             DateTime dtr;
             var tryDtr = DateTime.TryParse(s, out dtr);
             return (tryDtr) ? dtr : default(DateTime);
+        }
+
+        public static long DateDiff(this DateTime date1, DateTime date2, DateInterval interval)
+        {
+
+            TimeSpan ts = ts = date2 - date1;
+
+            switch (interval)
+            {
+                case DateInterval.Year:
+                    return date2.Year - date1.Year;
+                case DateInterval.Month:
+                    return (date2.Month - date1.Month) + (12 * (date2.Year - date1.Year));
+                case DateInterval.Weekday:
+                    return Fix(ts.TotalDays) / 7;
+                case DateInterval.Day:
+                    return Fix(ts.TotalDays);
+                case DateInterval.Hour:
+                    return Fix(ts.TotalHours);
+                case DateInterval.Minute:
+                    return Fix(ts.TotalMinutes);
+                default:
+                    return Fix(ts.TotalSeconds);
+            }
         }
 
 
@@ -313,6 +348,15 @@ namespace JerkyTool
             }
 
             return sbData.ToString();
+        }
+
+        private static long Fix(double Number)
+        {
+            if (Number >= 0)
+            {
+                return (long)Math.Floor(Number);
+            }
+            return (long)Math.Ceiling(Number);
         }
     }
 
