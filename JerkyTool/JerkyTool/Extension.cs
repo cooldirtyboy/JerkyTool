@@ -32,7 +32,7 @@ namespace JerkyTool
         {
 
             TimeSpan ts = ts = date2 - date1;
-
+            
             switch (interval)
             {
                 case DateInterval.Year:
