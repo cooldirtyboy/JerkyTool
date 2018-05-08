@@ -1,4 +1,6 @@
-﻿namespace JerkyTool.Utilities
+﻿using JerkyTool;
+
+namespace JerkyTool.Utilities
 {
   public static  class Helper
     {
