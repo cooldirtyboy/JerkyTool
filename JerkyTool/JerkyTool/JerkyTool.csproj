@@ -8,7 +8,20 @@
      <RepositoryUrl>https://github.com/cooldirtyboy/JerkyTool</RepositoryUrl>
      <Authors>cooldirtyboy</Authors>
      <Company />
+     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+  </ItemGroup>
 
  
 

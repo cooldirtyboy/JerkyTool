@@ -337,6 +337,7 @@ namespace JerkyTool
         #region Dates
         public static DateTime ToDateTime(this string s)
         {
+            
             DateTime dtr;
             var tryDtr = DateTime.TryParse(s, out dtr);
             return (tryDtr) ? dtr : default(DateTime);
