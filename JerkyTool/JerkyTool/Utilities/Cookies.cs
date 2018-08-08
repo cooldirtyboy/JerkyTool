@@ -7,6 +7,7 @@ using System.Data;
 using System.Configuration;
 using System.Web;
 using System.Net;
+using JerkyTool;
 
 
 namespace JerkyTool.Utilities
@@ -15,8 +16,8 @@ namespace JerkyTool.Utilities
     {
         public static bool SetCookie(string cookiename, string cookievalue)
         {
-            //JerkyTool.Properties.Settings.Default.DefaultDomain;
-          
+            
+           
             return SetCookie(cookiename, cookievalue, string.Empty);
         }
 
@@ -252,7 +253,7 @@ namespace JerkyTool.Utilities
             const string querystring_name = "q";
 
             bool _isenabled = false;
-
+            
             // Need this to display properly in designer
             if (HttpContext.Current == null) return false;
 
@@ -341,9 +342,8 @@ namespace JerkyTool.Utilities
         {
             get
             {
-                return "";
-
-                
+                var domain = Properties.Settings.Default.DefaultDomain;
+                return string.IsNullOrEmpty(domain) == true  ?  string.Empty : domain  ;                
             }
         }
 

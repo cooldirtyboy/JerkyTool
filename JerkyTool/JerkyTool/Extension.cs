@@ -27,6 +27,7 @@ namespace JerkyTool
 
         public static bool ToBool(this string s)
         {
+        
             try
             {
                 return Convert.ToBoolean(s);
