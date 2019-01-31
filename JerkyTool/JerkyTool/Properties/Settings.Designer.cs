@@ -12,7 +12,7 @@ namespace JerkyTool.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -31,69 +31,58 @@ namespace JerkyTool.Properties {
                 return ((string)(this["DefaultDomain"]));
             }
         }
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("log/logger.log")]
-        public string LogFile
-        {
-            get
-            {
+        public string LogFile {
+            get {
                 return ((string)(this["LogFile"]));
             }
         }
-
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
-        public int MaxRolledLogCount
-        {
-            get
-            {
+        public int MaxRolledLogCount {
+            get {
                 return ((int)(this["MaxRolledLogCount"]));
             }
         }
-
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10000000")]
-        public int MaxLogSize
-        {
-            get
-            {
+        public int MaxLogSize {
+            get {
                 return ((int)(this["MaxLogSize"]));
             }
         }
-
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("%date : %message")]
-        public string MsgFormat
-        {
-            get
-            {
+        public string MsgFormat {
+            get {
                 return ((string)(this["MsgFormat"]));
             }
         }
-
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("MMM-dd-yyyy hh:mm:ss.f")]
-        public string MsgDateFormat
-        {
-            get
-            {
+        public string MsgDateFormat {
+            get {
                 return ((string)(this["MsgDateFormat"]));
             }
         }
-
+        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool MsgShowInConsole
-        {
-            get
-            {
-                return ((bool)(this["MsgShowInConsole"]));
+        public string MsgShowInConsole {
+            get {
+                return ((string)(this["MsgShowInConsole"]));
             }
         }
     }

@@ -29,7 +29,7 @@ namespace JerkyTool
         {
             var msgInfo = MsgFormat.Replace("%date", DateTime.Now.ToString(MsgDateFormat)).Replace("%message", msg);
 
-            if (Properties.Settings.Default.MsgShowInConsole)
+            if (Properties.Settings.Default.MsgShowInConsole == "true")
             {
                 Console.WriteLine(msgInfo);
             }

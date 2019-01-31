@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>JerkyTool</id>
+    <version>1.0.0.3</version>
+    <authors>cooldirtyboy</authors>
+    <owners>cooldirtyboy</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/cooldirtyboy/JerkyTool/wiki</projectUrl>
+    <description>Simple tool that consist many different function.</description>
+    <repository url="https://github.com/cooldirtyboy/JerkyTool" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="mscorlib" targetFramework=".NETFramework4.6.1" />
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework=".NETFramework4.6.1" />
+      <frameworkAssembly assemblyName="System.Net" targetFramework=".NETFramework4.6.1" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.6.1" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\bin\Release\net461\JerkyTool.dll" target="lib\net461\JerkyTool.dll" />
+  </files>
+</package>

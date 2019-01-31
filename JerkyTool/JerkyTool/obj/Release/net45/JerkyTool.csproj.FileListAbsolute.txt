@@ -1,0 +1,7 @@
+C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net45\JerkyTool.csproj.CoreCompileInputs.cache
+C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net45\JerkyTool.AssemblyInfoInputs.cache
+C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net45\JerkyTool.AssemblyInfo.cs
+C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\bin\Release\net45\JerkyTool.dll
+C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\bin\Release\net45\JerkyTool.pdb
+C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net45\JerkyTool.dll
+C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net45\JerkyTool.pdb
