@@ -1,8 +1,0 @@
-C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\bin\Release\net461\JerkyTool.dll
-C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\bin\Release\net461\JerkyTool.pdb
-C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net461\JerkyTool.csprojResolveAssemblyReference.cache
-C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net461\JerkyTool.csproj.CoreCompileInputs.cache
-C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net461\JerkyTool.AssemblyInfoInputs.cache
-C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net461\JerkyTool.AssemblyInfo.cs
-C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net461\JerkyTool.dll
-C:\project\GitProject\JerkyTool\JerkyTool\JerkyTool\obj\Release\net461\JerkyTool.pdb

@@ -342,7 +342,8 @@ namespace JerkyTool.Utilities
         {
             get
             {
-                var domain = Properties.Settings.Default.DefaultDomain;
+                //var domain = Properties.Settings.Default.DefaultDomain;
+                var domain = string.Empty;
                 return string.IsNullOrEmpty(domain) == true  ?  string.Empty : domain  ;                
             }
         }

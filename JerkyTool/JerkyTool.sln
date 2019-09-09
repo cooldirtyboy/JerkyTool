@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JerkyTool", "JerkyTool\JerkyTool.csproj", "{71F1D89F-1D53-4C9B-A2A8-FE2EACF7712C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JerkyTool", "JerkyTool\JerkyTool.csproj", "{17C39042-3DE5-4E22-8FC1-115D63639D35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{71F1D89F-1D53-4C9B-A2A8-FE2EACF7712C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71F1D89F-1D53-4C9B-A2A8-FE2EACF7712C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71F1D89F-1D53-4C9B-A2A8-FE2EACF7712C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71F1D89F-1D53-4C9B-A2A8-FE2EACF7712C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C39042-3DE5-4E22-8FC1-115D63639D35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C39042-3DE5-4E22-8FC1-115D63639D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C39042-3DE5-4E22-8FC1-115D63639D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C39042-3DE5-4E22-8FC1-115D63639D35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1237F385-BEE5-4A6D-950F-39BF013EA340}
+		SolutionGuid = {913B4FC9-2D8D-4149-82F1-A9BCB5D78F5B}
 	EndGlobalSection
 EndGlobal

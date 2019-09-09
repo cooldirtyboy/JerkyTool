@@ -1,41 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-     <TargetFramework>net45</TargetFramework>
-     <Version>1.0.0.5</Version>
-     <Description>Simple tool that consist many different function.</Description>
-     <PackageProjectUrl>https://github.com/cooldirtyboy/JerkyTool/wiki</PackageProjectUrl>
-     <RepositoryUrl>https://github.com/cooldirtyboy/JerkyTool</RepositoryUrl>
-     <Authors>cooldirtyboy</Authors>
-     <Company />
-     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-     <SignAssembly>true</SignAssembly>
-     <AssemblyOriginatorKeyFile>jerkytool.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworks>net45;net461;netstandard2.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Version>1.0.0.6</Version>
+    <Description>Simple tool that consist many different function.</Description>
+    <PackageProjectUrl>https://github.com/cooldirtyboy/JerkyTool/wiki</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/cooldirtyboy/JerkyTool</RepositoryUrl>
+    <Authors>cooldirtyboy</Authors>
+    <Company />
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>jerkytool.snk</AssemblyOriginatorKeyFile>
+    <AssemblyVersion>1.0.0.6</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="mscorlib" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Net" />
-    <Reference Include="System.Web" />
+    <Compile Remove="RollingLogger.cs" />
+    <Compile Remove="Utilities\Cookies.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Properties\Settings.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-
-
- 
 
 </Project>
