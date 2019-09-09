@@ -13,6 +13,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>jerkytool.snk</AssemblyOriginatorKeyFile>
     <AssemblyVersion>1.0.0.6</AssemblyVersion>
+    <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
